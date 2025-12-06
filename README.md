@@ -1,1 +1,1 @@
-Leetcode practice problems in order to improve DSA skills
+LeetCode practice in order to improve DSA skills
