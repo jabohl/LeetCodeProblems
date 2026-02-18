@@ -2,14 +2,14 @@
 #include <stdlib.h>
 int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
     
-    static int arr[2];
+    static int myArray[2];
     *returnSize = 2;
-    for(int i=0;i<numsSize-1;i++){
-        for(int i2=i+1;i2<numsSize;i2++){
-            if (nums[i]+nums[i2] == target){
-                arr[0]=i;
-                arr[1]=i2;
-                return arr;           
+    for(int imdex = 0; index < numsSize - 1; index++){
+        for(int index2 = index + 1; index2 < numsSize; index2++){
+            if (nums[index] + nums[index2] == target){
+                myArray[0] = index;
+                myArray[1] = index2;
+                return myArray;           
             }
         }
     }
