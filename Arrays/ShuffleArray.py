@@ -5,17 +5,25 @@ class Solution:
     
         self.myList=[]
         self.resList=[]
-        for i in nums:
-            self.resList.append(i)
-            self.myList.append(i)
+        
+        for val in nums:
+            
+            self.resList.append(val)
+            self.myList.append(val)
 
     def reset(self) -> List[int]:
+        
         self.myList=self.resList
+        
         return self.myList
 
     def shuffle(self) -> List[int]:
-        test=[]
-        for i in self.myList:
-            test.append(i)
-        random.shuffle(test)
-        return test
+        shuffleArray = []
+        
+        for val in self.myList:
+            shuffleArray.append(val)
+        
+        random.shuffle(shuffleArray)
+        
+        return shuffleArray
+
