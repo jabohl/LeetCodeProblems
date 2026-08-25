@@ -7,9 +7,16 @@
 class Solution:
     def deleteNode(self, node):
         """
+        Delete the given (non-tail) node from a singly-linked list by copying
+        the next node's value into this node and bypassing the next node.
+
         :type node: ListNode
-        :rtype: void Do not return anything, modify node in-place instead.
+        :rtype: None
         """
-        value = node.next
-        node.next = value.next
-        node.val=value.val
+        if node is None or node.next is None:
+            # This method cannot delete the tail node.
+            raise ValueError("Cannot delete the tail node with this method")
+
+        next_node = node.next
+        node.val = next_node.val
+        node.next = next_node.next
